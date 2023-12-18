@@ -1,0 +1,18 @@
+h1 {
+    margin: 0 0 20px 0!important;
+}
+
+#navBar {
+    display: none;
+}
+
+#list {
+    margin: 20px;
+    padding: 0;
+}
+
+#toolTip {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

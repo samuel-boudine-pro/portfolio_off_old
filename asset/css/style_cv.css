@@ -1,0 +1,537 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    background: rgb(13, 13, 13);
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    padding: 0;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    border-bottom: 2px solid orangered;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: OrangeRed;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: #fff;
+}
+
+.navbar .menu li {
+    background-color: orangered;
+    border-radius: 10% 10% 0 0;
+    list-style: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: 1px solid orangered;
+}
+
+.navbar .menu li:hover {
+    border-radius: 25% 25% 0 0;
+    background-color: orange;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px;
+    transition: color 0.3s ease;
+}
+
+.container_view {
+    display: flex;
+    height: calc(100vh - 131px);
+    color: #fff;
+    /* background-color: aqua; */
+    font-family: 'Ubuntu', sans-serif;
+    /*************animation**************/
+    position: relative;
+}
+
+.container_view .max-width {
+    /* background-color: orangered; */
+    border-radius: 20px;
+    width: 100%;
+    height: calc(100% - 20px);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/***********************************************************************************************************************************************/
+
+#services,
+#tools,
+#skills,
+#projects {
+    display: none;
+}
+
+h1 {
+    color: orangered;
+    margin-bottom: 30px;
+}
+
+.categorie {
+    transition: all 0.3 ease;
+}
+
+
+/***********************************************************************************************************************************************/
+
+::selection {
+    color: #fff;
+    background: #1cc7d0;
+}
+
+.carousel {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+.carousel .card {
+    color: #fff;
+    height: 350px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: visible;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.owl-dot {
+    height: 15px;
+    width: 45px;
+    margin: 0 5px;
+    outline: none;
+    border-radius: 14px;
+    border: 2px solid orangered!important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: orangered!important;
+    border: 1px solid #fff !important;
+}
+
+
+/*******************************************************************************************************************************************************/
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.wrapper .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    background: orangered;
+    border-radius: 10px;
+    transform: translateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border: 1px solid #fff;
+}
+
+.wrapper:hover>.front_face {
+    transform: rotateY(-180deg);
+}
+
+.wrapper .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.wrapper .back_face {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: rotateY(180deg);
+    border: 1px solid #fff;
+}
+
+.wrapper:hover>.back_face {
+    transform: rotateY(0deg);
+}
+
+
+/*******************************************************************************************************************/
+
+.wrapper .back_face .circle {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    cursor: default;
+    border: 1px solid #fff;
+}
+
+.back_face .circle .box,
+.back_face .circle .box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.back_face .circle .box {
+    height: 100%;
+    width: 100%;
+    background: orangered;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: all 0.2s;
+}
+
+.back_face .circle:hover .box {
+    transform: translate(-50%, -50%) scale(0.91);
+}
+
+.back_face .circle .box span,
+.wrapper .back_face .text {
+    background: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.circle .box span {
+    font-size: 38px;
+    font-family: sans-serif;
+    font-weight: 600;
+    transform: translate(-45%, -45%);
+    transition: all 0.1s;
+}
+
+.back_face .circle:hover .box span {
+    transform: translate(-45%, -45%) scale(1.09);
+}
+
+
+/***********************************************************************************************************************************************/
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .left img {
+    width: 80%;
+    object-fit: cover;
+    border-bottom: 2px solid orangered;
+}
+
+#about .left {
+    width: 45%;
+}
+
+#about .right {
+    width: 55%;
+}
+
+
+/**********************************************************************************************************************/
+
+#tools .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#tools .wrapper .card {
+    background: orangered;
+    width: 430px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    border: 2px solid orange;
+    justify-content: space-between;
+    border-radius: 100px 100px 100px 100px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    animation: animate_slide 15s linear infinite;
+    animation-delay: calc(3s * var(--delay));
+}
+
+#tools .wrapper .card:last-child {
+    animation-delay: calc(-3s * var(--delay));
+}
+
+@keyframes animate_slide {
+    0% {
+        opacity: 0;
+        transform: translateY(100%) scale(0.5);
+    }
+    5%,
+    20% {
+        opacity: 0.4;
+        transform: translateY(100%) scale(0.7);
+    }
+    25%,
+    40% {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0%) scale(1);
+    }
+    45%,
+    60% {
+        opacity: 0.4;
+        transform: translateY(-100%) scale(0.7);
+    }
+    65%,
+    100% {
+        opacity: 0;
+        transform: translateY(-100%) scale(0.5);
+    }
+}
+
+#tools .wrapper .card .content {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+#tools .wrapper .card .img {
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    left: -5px;
+    background: orange;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+#tools .wrapper .card .img img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#tools .wrapper .card .details {
+    margin-left: 80px;
+}
+
+#tools .wrapper .card .details span {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+/**********************************************************************************************************************/
+
+#projects {
+    flex-direction: column;
+    margin-bottom: auto;
+    background: url("../../media/images/backgroundOs.jpg")no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#projects div img {
+    height: 100%
+}
+
+#projects div {
+    height: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#projects span {
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    background: orangered;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin: auto;
+    border: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+#projects span:hover {
+    cursor: pointer;
+    background: orange;
+    font-size: 20px;
+}
+
+
+/**********************************************************************************************************************/
+
+#services .carousel .card .wrapper .card {
+    overflow: hidden;
+}
+
+#services .carousel .card .wrapper .card i {
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    color: #fff;
+}
+
+
+/**********************************************************************************************************************/
+
+footer {
+    width: 100%;
+    background: orangered;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/**********************************************************************************************************************/
+
+@media (max-width: 1104px) {}
+
+@media (max-width: 991px) {
+    .max-width {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container_view {
+        height: auto;
+        min-height: calc(100vh - 118px);
+    }
+    /* pas obliger*/
+    .navbar .menu li a:hover {
+        color: OrangeRed;
+    }
+    /* fin */
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+    #skill {
+        height: 100%;
+    }
+    #about {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    #about .left {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        margin: 0 auto 60px;
+        text-align: center;
+    }
+    #about .left img {
+        height: calc(100vh - 71px);
+    }
+    #about .right {
+        width: 100%;
+        display: block;
+    }
+    #about .right h1 {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    #projects div {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    #projects div img {
+        width: 50%;
+        height: auto;
+    }
+    #projects span {
+        margin-top: 50px;
+    }
+}

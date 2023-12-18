@@ -1,0 +1,57 @@
+@media screen and (max-width:500px) {
+    #list {
+        padding-bottom: 65px!important
+    }
+    #searchMsg {
+        transform: translateY(-70px)!important;
+        -o-transform: translateY(-70px)!important;
+        -moz-transform: translateY(-70px)!important;
+        -webkit-transform: translateY(-70px)!important;
+        -ms-transform: translateY(-70px)!important;
+        -khtml-transform: translateY(-70px)!important
+    }
+}
+
+h1 {
+    margin: 20px 0 0 30px!important
+}
+
+#navBar {
+    top: inherit!important;
+    bottom: 0!important;
+    border-bottom: none!important;
+    border-top: 1px solid #999!important
+}
+
+#list {
+    padding-top: 20px!important;
+    margin-bottom: 30px!important
+}
+
+#toolTip {
+    top: 25px!important
+}
+
+#searchMsg {
+    top: inherit!important;
+    bottom: 0!important;
+    transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -khtml-transform-origin: center bottom;
+    transform: translateY(-37px);
+    -o-transform: translateY(-37px);
+    -moz-transform: translateY(-37px);
+    -webkit-transform: translateY(-37px);
+    -ms-transform: translateY(-37px);
+    -khtml-transform: translateY(-37px)
+}
+
+#searchMsg span {
+    top: inherit!important;
+    bottom: -7px!important;
+    border-bottom: none!important;
+    border-top: 7px solid red!important
+}
